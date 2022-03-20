@@ -1,6 +1,7 @@
 const palindrome=(str)=>{
     if(!str) return false;
-    return str==[...str].reverse().join('');
+    const newstr=str.replace(/[^a-z0-9]/gi,'')
+    return newstr.toLowerCase()==[...newstr].reverse().join('').toLowerCase();
 }
 
-console.log(palindrome("ababca"))
+console.log(palindrome("sit ad est love"))
